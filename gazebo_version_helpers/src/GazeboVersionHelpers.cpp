@@ -105,8 +105,10 @@ void gazebo::SetZ(GzVector3 &v, const double val)
 double gazebo::GetX(const GzVector3 &v)
 {
 #if GAZEBO_MAJOR_VERSION >= 8
+    std::cout<<"GAZEBO_MAJOR_VERSION >= 8"<<std::endl;
   return v.X();
-#else 
+#else
+    std::cout<<"GAZEBO_MAJOR_VERSION < 8"<<std::endl;
   return v.x;
 #endif 
 }
